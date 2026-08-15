@@ -13,4 +13,5 @@ def countVowels(word):         #function takes word/user input as argument
   return count			#return count=tracks num of vowels
 output = countVowels(word)	#vowel stores count for print statement
 print('The word "',word,'" has ', output, 'vowels')
+print('That was fun!')
 
