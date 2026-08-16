@@ -11,6 +11,7 @@ class Car:        #blueprint recipe thing called 'car'
 my_car = Car("Toyota", "Corolla")     #brand-Toyota;model-Corolla; create car
 my_car.display()                      #call display function for output
 
+#collect input inside class function
 class Cars:           #blueprint
   def __init__(self):     #what happens when car is created
     self.make = input("Enter a car brand: ")
@@ -22,7 +23,7 @@ class Cars:           #blueprint
 my_cars = Cars()      #use myCars blueprint to create an actual car
 my_cars.display()
 
-#collect input outside class
+#collect input outside class function
 
 class Car:
   def __init__(self, make, style):
