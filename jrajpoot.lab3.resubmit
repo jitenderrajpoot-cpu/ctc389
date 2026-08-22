@@ -1,0 +1,63 @@
+#Jitender Rajpoot
+#Lab3 resubmit part 3 without global variable
+
+#Jitender Rajpoot
+#Lab3 Grade averages with functions [edited without global variable]
+
+def displayGrade(grade):    #function to display grades
+    if grade >= 98:         #print statements pertaining to grades
+        return("A+.")
+    elif grade >= 93:
+        return(" A.")
+    elif grade >= 90:
+        return(" A-")
+    elif grade >= 88:
+        return(" B+.")
+    elif grade >= 83:
+        return(" B.")
+    elif grade >= 80:
+        return(" B-")
+    elif grade >= 78:
+        return(" C+.")
+    elif grade >= 73:
+        return(" C.")
+    elif grade >= 70:
+        return(" C-")
+    elif grade >= 68:
+        return(" D+.")
+    elif grade >= 62:
+        return(" D.")
+    elif grade >= 60:
+        return(" D-")
+    elif grade >= 58:
+        return("F+.")
+    elif grade >= 50:
+        return("F.")
+    else:
+        return(" F-")
+
+totalAve = 0                            #empty variable to store and total averages
+
+def getAverage(scoreA, scoreB, scoreC):   #function takes 3 scores as arguments
+  average = (scoreA + scoreB + scoreC) / 3      #calculate average 3 grades by adding and dividing by 3
+  return average                          #return average of scores
+
+for user in range(1,4):                 #for users 1,2,3
+  grade1 = float(input("User" + str(user) + ", enter first grade value between 0-100: "))   #input grade1
+  print("You entered a grade of ", displayGrade(grade1)) #print grade conversion from. input using function displayGrade
+
+  grade2 = float(input("User" + str(user) + ", enter second grade value between 0-100: "))
+  print("You entered a grade of ", displayGrade(grade2))
+
+  grade3 = float(input("User" + str(user) + ", enter third grade value between 0-100: "))
+  print("You entered a grade of ", displayGrade(grade3))
+
+  userAve = getAverage(grade1, grade2, grade3)  #variable to calculate and store average of grades per user using function getAverage
+  totalAve += userAve                     #variable to add average of grades per user
+  print("Your avearge is",userAve)                      #diplay average of 3 grades
+  print("The average grade is", displayGrade(userAve))  #display conversion of average as grade using displayGrade function
+
+overallAve = totalAve / 3                 #divide totalAve(added averages) by 3 to determine overallAve
+overallGrade = displayGrade(overallAve)   #variable to store grade conversion of overallAve using displayGrade function
+print("The final average for all users is ", overallAve, "and the grade is ", overallGrade)   #final print statement
+
